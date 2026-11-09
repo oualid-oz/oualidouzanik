@@ -263,6 +263,28 @@ ul {
 .aside .nav li a i {
     margin-right: 15px;
 }
+.language-switcher {
+    position: absolute;
+    bottom: 30px;
+    display: flex;
+    gap: 8px;
+}
+.language-switcher .language-option {
+    min-width: 44px;
+    padding: 7px 12px;
+    border: 1px solid var(--bg-black-50);
+    border-radius: 5px;
+    background: var(--bg-black-100);
+    color: var(--text-black-700);
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+}
+.language-switcher .language-option.active {
+    border-color: var(--skin-color);
+    background: var(--skin-color);
+    color: #fff;
+}
 
 
 /*                    Home                   */
@@ -672,6 +694,13 @@ h3.my-profession {
 @media (max-width:1249px) {
     .section .container {
         padding-top: 70px;
+    }
+    .language-switcher {
+        position: fixed;
+        top: 20px;
+        left: 90px;
+        bottom: auto;
+        z-index: 20;
     }
     .aside {
         left: -270px;
